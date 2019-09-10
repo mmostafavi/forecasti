@@ -75,6 +75,53 @@ const dataAnalyzer = (data, gmtOffset) => {
         }
     }
 
+    let cloud_humid_data = [];
+    let wind_pressure_temp_data = [];
+
+
+    for (let i = 0; i <= 32; i = i + 8) {
+
+        let rawTempData = tempData.slice(i, i + 8);
+        let tempChartData = {
+            id: "Temperature(C)",
+            color: "hsl(345, 70%, 50%)",
+            data: rawTempData
+        };
+
+        let rawHumidityData = humidityData.slice(i, i + 8);
+        let humidityChartData = {
+            id: "Humidity(%)",
+            color: "hsl(159, 70%, 50%)",
+            data: rawHumidityData
+        };
+
+        let rawCloudData = cloudData.slice(i, i + 8);
+        let cloudChartData = {
+            id: "Cloudiness(C)",
+            color: "hsl(259, 70%, 50%)",
+            data: rawCloudData
+        };
+
+        let rawPressureData = pressureData.slice(i, i + 8);
+        let pressureChartData = {
+            id: "Pressure(hAtm)",
+            color: "hsl(338, 70%, 50%)",
+            data: rawPressureData
+        };
+
+        let rawWindSpeedData = windSpeedData.slice(i, i + 8);
+        let windSpeedChartData = {
+            id: "Wind(m/s)",
+            color: "hsl(51, 70%, 50%)",
+            data: rawWindSpeedData
+        };
+
+        cloud_humid_data.push([cloudChartData, humidityChartData]);
+        wind_pressure_temp_data.push([windSpeedChartData, pressureChartData, tempChartData]);
+
+    }
+    console.log(wind_pressure_temp_data);
+
     // console.log(windSpeedData); //0-5
     // console.log(pressureData);//hAtmosphere-->*100
     // console.log(humidityData); //%
@@ -82,7 +129,14 @@ const dataAnalyzer = (data, gmtOffset) => {
 
 
     return {
-        charts: null
+        cloud_humid_data: cloud_humid_data,
+        wind_pressure_temp_data: wind_pressure_temp_data,
+        windSpeedData: windSpeedData,
+        pressureData: pressureData,
+        cloudData: cloudData,
+        humidityData: humidityData,
+        tempData: tempData,
+        weatherData: weatherData
     }
 };
 
