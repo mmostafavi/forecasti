@@ -3,6 +3,8 @@ import {ResponsiveLine} from "@nivo/line";
 
 import classes from "./Result.module.css";
 import dataAnalyzer from "../../utils/dataAnalyzer";
+import ChartPanel from "../../components/ChartPanel/ChartPanel"
+import ChartGenerator from "../../components/ChartGenerator/ChartGenerator"
 
 class Result extends Component {
 
@@ -10,130 +12,174 @@ class Result extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            updateChart: false,
-            chartData: null,
-            slide: 0,
-            updateTimes: 0,
-            cloud_humid_data: null,
-            wind_pressure_temp_data: null,
-            windSpeedData: null,
-            pressureData: null,
-            cloudData: null,
-            humidityData: null,
-            tempData: null,
-            weatherData: null
-
+            slides: {
+                cloud_data_slide: null,
+                wind_data_slide: null,
+                humidity_data_slide: null,
+                temp_data_slide: null,
+                pressure_data_slide: null,
+            },
+            rawData: {
+                windSpeedData: null,
+                pressureData: null,
+                cloudData: null,
+                humidityData: null,
+                tempData: null,
+                weatherData: null
+            },
+            chartData: {
+                labelDates: null,
+                cloud_data: null,
+                wind_data: null,
+                humidity_data: null,
+                temp_data: null,
+                pressure_data: null,
+            },
+            haveChartData: false,
         };
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-
+        console.log(this.props.searchTimes !== prevProps.searchTimes)
         if (this.props.searchTimes !== prevProps.searchTimes
         ) {
+
+            this.setState(prevState => {
+                return {
+                    slides: {
+                        cloud_data_slide: null,
+                        wind_data_slide: null,
+                        humidity_data_slide: null,
+                        temp_data_slide: null,
+                        pressure_data_slide: null,
+                    },
+                    haveChartData: false
+                }
+            });
             let {
-                cloud_humid_data,
-                wind_pressure_temp_data,
+                cloud_data,
+                wind_data,
+                humidity_data,
+                temp_data,
+                pressure_data,
                 windSpeedData,
                 pressureData,
                 cloudData,
                 humidityData,
                 tempData,
-                weatherData
+                weatherData,
+                labelDates
             } = dataAnalyzer(this.props.data.list, this.props.gmtOffset);
             this.setState(prevState => {
                 return {
-                    cloud_humid_data,
-                    wind_pressure_temp_data,
-                    windSpeedData,
-                    pressureData,
-                    cloudData,
-                    humidityData,
-                    tempData,
-                    weatherData
+                    slides: {
+                        cloud_data_slide: 0,
+                        wind_data_slide: 0,
+                        humidity_data_slide: 0,
+                        temp_data_slide: 0,
+                        pressure_data_slide: 0
+                    },
+                    rawData: {
+                        windSpeedData,
+                        pressureData,
+                        cloudData,
+                        humidityData,
+                        tempData,
+                        weatherData,
+                    },
+                    chartData: {
+                        cloud_data,
+                        wind_data,
+                        humidity_data,
+                        temp_data,
+                        pressure_data,
+                        labelDates
+                    },
+                    haveChartData: true
                 }
             })
         }
-
-
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return (nextProps.data !== this.props.data);
+        return (
+            nextProps.data !== this.props.data
+            || nextState.slides.cloud_humid_slide !== this.state.slides.cloud_humid_slide
+            || nextState.slides.wind_pressure_temp_slide !== this.state.slides.wind_pressure_temp_slide
+        );
     }
 
     render() {
-        let chart = null;
-        if (this.state.chartData) {
-            console.log("reached here");
-            chart = (
-                <ResponsiveLine
-                    data={this.state.chartData}
-                    margin={{top: 50, right: 110, bottom: 50, left: 60}}
-                    xScale={{type: 'point'}}
-                    yScale={{type: 'linear', stacked: true, min: 'auto', max: 'auto'}}
-                    curve="natural"
-                    axisTop={null}
-                    axisRight={null}
-                    axisBottom={{
-                        orient: 'bottom',
-                        tickSize: 5,
-                        tickPadding: 5,
-                        tickRotation: 0,
-                        legend: 'transportation',
-                        legendOffset: 36,
-                        legendPosition: 'middle'
-                    }}
-                    axisLeft={{
-                        orient: 'left',
-                        tickSize: 5,
-                        tickPadding: 5,
-                        tickRotation: 0,
-                        legend: 'count',
-                        legendOffset: -40,
-                        legendPosition: 'middle'
-                    }}
-                    colors={{scheme: 'category10'}}
-                    pointSize={9}
-                    pointColor={{theme: 'labels.text.fill'}}
-                    pointBorderWidth={2}
-                    pointBorderColor={{from: 'serieColor'}}
-                    pointLabel="y"
-                    pointLabelYOffset={-12}
-                    enableArea={true}
-                    useMesh={true}
-                    legends={[
-                        {
-                            anchor: 'bottom-right',
-                            direction: 'column',
-                            justify: false,
-                            translateX: 100,
-                            translateY: -148,
-                            itemsSpacing: 0,
-                            itemDirection: 'left-to-right',
-                            itemWidth: 79,
-                            itemHeight: 20,
-                            itemOpacity: 0.75,
-                            symbolSize: 12,
-                            symbolShape: 'circle',
-                            symbolBorderColor: 'rgba(0, 0, 0, .5)',
-                            effects: [
-                                {
-                                    on: 'hover',
-                                    style: {
-                                        itemBackground: 'rgba(0, 0, 0, .03)',
-                                        itemOpacity: 1
-                                    }
-                                }
-                            ]
-                        }
-                    ]}
+        let cityInfo = null;
+        let cloudiness_chart = null;
+        let temp_chart = null;
+        let pressure_chart = null;
+        let wind_chart = null;
+        let humidity_chart = null;
+        if (this.state.haveChartData) {
+            cityInfo = (
+                <>
+                    <h2 className={classes.CityName}>{this.props.data.city.name}</h2>
+                    <h4 className={classes.Population}>{this.props.data.city.population}</h4>
+                </>
+            );
+
+            cloudiness_chart = (
+                <ChartPanel
+                    legend={"Cloudiness(%)"}
+                    data={this.state.chartData.cloud_data[this.state.slides.cloud_data_slide]}
+                    chartTitle={"Cloudiness"}
                 />
             )
+            ;
+
+            temp_chart = (
+                <ChartPanel
+                    legend={"Temperature(C)"}
+                    data={this.state.chartData.temp_data[this.state.slides.temp_data_slide]}
+                    chartTitle={"Temperature"}
+                />
+            );
+
+            pressure_chart = (
+                <ChartPanel
+                    legend={"Pressure(hAtm)"}
+                    data={this.state.chartData.pressure_data[this.state.slides.pressure_data_slide]}
+                    chartTitle={"Pressure"}
+                />
+            );
+
+            wind_chart = (
+                <ChartPanel
+                    legend={"Wind(m/s)"}
+                    data={this.state.chartData.wind_data[this.state.slides.wind_data_slide]}
+                    chartTitle={"Wind"}
+                />
+            );
+
+            humidity_chart = (
+                <ChartPanel
+                    legend={"Humidity(%)"}
+                    data={this.state.chartData.humidity_data[this.state.slides.humidity_data_slide]}
+                    chartTitle={"Humidity"}
+                />
+            );
         }
         return (
             <section className={classes.Result}>
+                <div className={classes.CityInfo}>
+                    {cityInfo}
+                </div>
                 <div className={classes.Charts}>
-                    {chart}
+                    {temp_chart}
+
+                    {wind_chart}
+
+                    {pressure_chart}
+
+                    {cloudiness_chart}
+
+                    {humidity_chart}
                 </div>
             </section>
         )

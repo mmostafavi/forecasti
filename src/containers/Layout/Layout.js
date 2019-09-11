@@ -45,19 +45,13 @@ class Layout extends Component {
             axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${this.state.searchForm.city.value},${this.state.searchForm.country.value}&appid=${this.state.appId}`)
                 .then(({data}) => {
                         console.log(data);
-                        axios.get(`http://api.timezonedb.com/v2.1/get-time-zone?key=B4YBKMH2YEV0&format=json&by=position&lat=${data.city.coord.lat}&lng=${data.city.coord.lon}`)
-                            .then((res) => {
-                                    this.setState(prevState => {
-                                        return {
-                                            gmtOffset: res.data.gmtOffset * 1000,
-                                            data: data,
-                                            population: data.city.population,
-                                            searchTimes: prevState.searchTimes + 1
-                                        }
-                                    })
-                                }
-                            ).catch(err => console.log(err));
-
+                        this.setState(prevState => {
+                            return {
+                                data: data,
+                                population: data.city.population,
+                                searchTimes: prevState.searchTimes + 1
+                            }
+                        })
                     }
                 ).catch(error => console.log(error));
 
