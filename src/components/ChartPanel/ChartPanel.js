@@ -12,6 +12,10 @@ const chartPanel = props => {
             <div className={classes.ChartContainer}>
                 <ChartGenerator legend={props.legend} data={props.data}/>
             </div>
+            <button className={classes.LeftArrow}
+                    onClick={() => props.onArrow(-1, props.chartSlideName)}>&#10094;</button>
+            <button className={classes.RightArrow}
+                    onClick={() => props.onArrow(1, props.chartSlideName)}>&#10095;</button>
         </div>
     )
 };

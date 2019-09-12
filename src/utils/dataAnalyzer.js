@@ -56,7 +56,8 @@ const dataAnalyzer = (data, gmtOffset) => {
             };
             weatherData[j] = {
                 description: data[j].weather[0].description,
-                main: data[j].weather[0].main
+                main: data[j].weather[0].main,
+                icon: data[j].weather[0].icon
             };
 
         }

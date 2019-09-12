@@ -28,10 +28,9 @@ class Layout extends Component {
                 }
             },
             search: false,
-            serachTimes: 0,
+            searchTimes: 0,
             data: null,
             appId: "4f2101004b0e81d7c5383284591e0746",
-            gmtOffset: null,
             population: null
         };
 
@@ -49,14 +48,13 @@ class Layout extends Component {
                             return {
                                 data: data,
                                 population: data.city.population,
+                                search: false,
                                 searchTimes: prevState.searchTimes + 1
                             }
                         })
                     }
                 ).catch(error => console.log(error));
 
-            // for blocking repetitive requests
-            this.setState({search: false})
         }
     }
 
@@ -78,7 +76,12 @@ class Layout extends Component {
 
     searchHandler(e) {
         e.preventDefault();
-        this.setState({search: true})
+        this.setState(prevState => {
+                return {
+                    search: true
+                }
+            }
+        )
     }
 
     cityNameChangeHandler(e) {
