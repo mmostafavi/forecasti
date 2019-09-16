@@ -19,6 +19,7 @@ import icon13d from "../../assets/icon/weather/png/13d.png"
 import icon13n from "../../assets/icon/weather/png/13n.png"
 import icon50d from "../../assets/icon/weather/png/50d.png"
 import icon50n from "../../assets/icon/weather/png/50n.png"
+import SlideLabel from "../SlideLabel/SlideLabel";
 
 
 const forecastTable = props => {
@@ -81,10 +82,12 @@ const forecastTable = props => {
                 </tbody>
 
             </table>
-            <button className={classes.LeftArrow}
-                    onClick={() => props.onArrow(-1, props.tableName)}>&#10094;</button>
-            <button className={classes.RightArrow}
-                    onClick={() => props.onArrow(1, props.tableName)}>&#10095;</button>
+
+            <SlideLabel
+                onArrow={props.onArrow}
+                name={props.tableName}
+                label={props.label}
+            />
         </div>
 
     )

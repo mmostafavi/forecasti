@@ -144,6 +144,7 @@ class Result extends Component {
                     wind={this.state.rawData.windSpeedData.slice(slide * 8, (slide + 1) * 8)}
                     cloudiness={this.state.rawData.cloudData.slice(slide * 8, (slide + 1) * 8)}
                     labels={this.state.chartData.labelDates}
+                    label={this.state.chartData.labelDates[slide]}
                     tableName={"table_slide"}
                     onArrow={this.onArrow}
                 />
@@ -156,7 +157,7 @@ class Result extends Component {
                     chartTitle={"Cloudiness"}
                     chartSlideName={"cloud_data_slide"}
                     onArrow={this.onArrow}
-
+                    label={this.state.chartData.labelDates[this.state.slides.cloud_data_slide]}
                 />
             )
             ;
@@ -168,7 +169,7 @@ class Result extends Component {
                     chartTitle={"Temperature"}
                     chartSlideName={"temp_data_slide"}
                     onArrow={this.onArrow}
-
+                    label={this.state.chartData.labelDates[this.state.slides.temp_data_slide]}
                 />
             );
 
@@ -179,7 +180,7 @@ class Result extends Component {
                     chartTitle={"Pressure"}
                     chartSlideName={"pressure_data_slide"}
                     onArrow={this.onArrow}
-
+                    label={this.state.chartData.labelDates[this.state.slides.pressure_data_slide]}
                 />
             );
 
@@ -190,7 +191,7 @@ class Result extends Component {
                     chartTitle={"Wind"}
                     chartSlideName={"wind_data_slide"}
                     onArrow={this.onArrow}
-
+                    label={this.state.chartData.labelDates[this.state.slides.wind_data_slide]}
                 />
             );
 
@@ -201,6 +202,7 @@ class Result extends Component {
                     chartTitle={"Humidity"}
                     chartSlideName={"humidity_data_slide"}
                     onArrow={this.onArrow}
+                    label={this.state.chartData.labelDates[this.state.slides.humidity_data_slide]}
                 />
             );
         }
