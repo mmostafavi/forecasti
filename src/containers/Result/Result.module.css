@@ -1,13 +1,70 @@
-.Container {
-    width: 100%;
-    margin: 1rem;
-}
-
 .Result {
     margin: 1rem auto;
 }
 
+.TableAndCityContainer {
+    padding-top: 0.5rem;
+    background-color: #00b7ff;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.CityInfo {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 1rem 0;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.CityName {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    background-color: #072448;
+    color: white;
+}
+
+.Population {
+    display: flex;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.PopulationLabel {
+    padding: 0.3rem;
+    background-color: #ffcb00;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.PopulationNumber {
+    padding: 0.3rem;
+    background-color: #f8aa4b;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    text-align: center;
+    color: black;
+}
 
 .ChartContainer {
     height: 300px;
+}
+
+.Charts {
+    width: 100%;
+    padding-top: 1rem;
+    border-radius: 30px 30px 0 0;
+    background-color: #f29e03;
+    background-image: url("../../assets/background/Square-Versatiles.svg");
 }

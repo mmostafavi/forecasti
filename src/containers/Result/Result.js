@@ -125,7 +125,14 @@ class Result extends Component {
             cityInfo = (
                 <>
                     <h2 className={classes.CityName}>{this.props.data.city.name}</h2>
-                    <h4 className={classes.Population}>{this.props.data.city.population}</h4>
+                    <div className={classes.Population}>
+                        <div className={classes.PopulationLabel}>
+                            Population
+                        </div>
+                        <div className={classes.PopulationNumber}>
+                            {this.props.data.city.population}
+                        </div>
+                    </div>
                 </>
             );
 
@@ -199,13 +206,16 @@ class Result extends Component {
         }
         return (
             <section className={classes.Result}>
-                <div className={classes.CityInfo}>
-                    {cityInfo}
+                <div className={classes.TableAndCityContainer}>
+                    <div className={classes.CityInfo}>
+                        {cityInfo}
+                    </div>
+                    <hr/>
+                    <div className={classes.Table}>
+                        {weatherTable}
+                    </div>
                 </div>
 
-                <div className={classes.Table}>
-                    {weatherTable}
-                </div>
                 <div className={classes.Charts}>
                     {temp_chart}
 

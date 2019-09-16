@@ -1,0 +1,75 @@
+.TableContainer {
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.Table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 90%;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.Table thead {
+    border-radius: 10px 10px 0 0;
+}
+
+.Table tbody {
+    border-radius: 0 0 10px 10px;
+}
+
+.Table thead tr {
+    border-radius: 10px 10px 0 0;
+}
+
+.Table tbody tr:last-of-type {
+    border-radius: 0 0 10px 10px;
+}
+
+.Table th {
+    /*border-right: 1px solid black;*/
+    /*border-left: 1px solid black;*/
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    background-color: #458027;
+}
+
+.Table td {
+    text-align: center;
+}
+
+/* for round border in corners of table */
+.Table th:first-of-type {
+    border-radius: 10px 0 0 0;
+}
+
+.Table th:last-of-type {
+    border-radius: 0 10px 0 0;
+}
+
+.Table tr:last-of-type td:first-of-type {
+    border-radius: 0 0 0 10px;
+}
+
+.Table tr:last-of-type td:last-of-type {
+    border-radius: 0 0 10px 0;
+}
+
+/* adding gray background to even rows (2, 4 , ..) */
+.Table tr:nth-child(even) {
+    background-color: #caccb9;
+}
+
+/* adding hover effect */
+.Table tr:hover {
+    background-color: #807c7d;
+}
+
+.Icon {
+    width: 50px;
+    height: 50px;
+}
+

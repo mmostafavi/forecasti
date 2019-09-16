@@ -50,30 +50,30 @@ const forecastTable = props => {
     }
     let tableData = null;
     if (props.labels) {
-        tableData = props.labels.map((label, index) => {
+        tableData = props.temp.map((temp, index) => {
             return (
-                <tr className={classes.Row} key={props.temp[index].x}>
-                    <td className={classes.Cell}>{props.temp[index].x}</td>
+                <tr className={classes.Row} key={temp.x}>
+                    <td className={classes.Cell}>{temp.x}</td>
                     <td className={classes.Weather}>
                         <img src={weatherIcons[index]} className={classes.Icon}/>
                     </td>
-                    <td className={classes.Cell}>{props.temp[index].y}</td>
+                    <td className={classes.Cell}>{temp.y}</td>
                     <td className={classes.Cell}>{props.wind[index].y}</td>
-                    <td className={classes.Cell}>{props.cloudiness[index].y}</td>
+                    {/*<td className={classes.Cell}>{props.cloudiness[index].y}</td>*/}
                 </tr>
             )
         })
     }
     return (
         <div className={classes.TableContainer}>
-            <table>
+            <table className={classes.Table}>
                 <thead>
                 <tr className={classes.FirstRow}>
                     <th className={classes.Header}>Hour</th>
                     <th className={classes.Header}>Weather</th>
                     <th className={classes.Header}>Temperature(C)</th>
                     <th className={classes.Header}>Wind(m/s)</th>
-                    <th className={classes.Header}>cloudiness(%)</th>
+                    {/*<th className={classes.Header}>cloudiness(%)</th>*/}
                 </tr>
                 </thead>
                 <tbody>

@@ -19,7 +19,7 @@ class Layout extends Component {
                     value: '',
                     valid: false,
                     elementConfig: {
-                        placeHolder: "Type your city",
+                        placeholder: "Type your city",
                         type: "text"
                     },
                     validation: {
@@ -53,7 +53,15 @@ class Layout extends Component {
                             }
                         })
                     }
-                ).catch(error => console.log(error));
+                )
+                .catch(error => {
+                    console.log(error);
+                    this.setState(prevState => {
+                        return {
+                            search: false,
+                        }
+                    })
+                });
 
         }
     }

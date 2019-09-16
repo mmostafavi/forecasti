@@ -11,3 +11,14 @@
 .ChartContainer {
     height: 300px;
 }
+
+.Chart {
+    width: 95%;
+    border-radius: 30px;
+    background-color: white;
+    margin: 3rem auto;
+}
+
+.ChartTitle {
+    text-align: center;
+}
