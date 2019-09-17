@@ -17,7 +17,7 @@ const slideLabel = (props) => {
                 <div className={classes.LabelDate}>
                     {props.label.start.month} {props.label.start.day}
                 </div>
-                ***
+                <div className={classes.Conjunction}>to</div>
                 <div className={classes.LabelDate}>
                     {props.label.end.month} {props.label.end.day}
                 </div>
@@ -26,7 +26,7 @@ const slideLabel = (props) => {
     }
     return (
         <div className={classes.LabelContainer}>
-            <button className={classes.LeftArrow}
+            <button className={classes.Arrow}
                     onClick={() => props.onArrow(-1, props.name)}
             >
                 &#10094;
@@ -34,7 +34,7 @@ const slideLabel = (props) => {
             <div className={classes.LabelDateContainer}>
                 {label}
             </div>
-            <button className={classes.RightArrow}
+            <button className={classes.Arrow}
                     onClick={() => props.onArrow(1, props.name)}
             >
                 &#10095;
