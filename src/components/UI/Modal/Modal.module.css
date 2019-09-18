@@ -28,11 +28,11 @@
 }
 
 .Open {
-    animation: modal-open 0.5s ease-out forwards;
+    animation: modal-open 0.5s ease-out 1 forwards;
 }
 
 .Close {
-    animation: modal-close 0.5s ease-out forwards;
+    animation: modal-close 0.5s ease-out 1 forwards;
 
 }
 

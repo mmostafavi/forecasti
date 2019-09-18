@@ -4,6 +4,7 @@ import classes from "./Result.module.css";
 import dataAnalyzer from "../../utils/dataAnalyzer";
 import ChartPanel from "../../components/ChartPanel/ChartPanel"
 import ForecastTable from "../../components/ForecastTable/ForecastTable"
+import Spinner from "../../components/UI/Spinner/Spinner"
 
 // chart title Icons
 import tempIcon from "../../assets/icon/chartTitle/temperature.svg";
@@ -217,31 +218,37 @@ class Result extends Component {
                 />
             );
         }
-        return !this.state.haveChartData ? null : (
-            <section className={classes.Result}>
-                <div className={classes.TableAndCityContainer}>
-                    <div className={classes.CityInfo}>
-                        {cityInfo}
+        return this.props.fetching ? (
+                <Spinner/>
+            ) :
+            !this.state.haveChartData ? null : (
+                <section className={classes.Result}>
+                    <div className={classes.TableAndCityContainer}>
+                        <div className={classes.CityInfo}>
+                            {cityInfo}
+                        </div>
+                        <hr/>
+
+                        {weatherTable}
+
                     </div>
-                    <hr/>
 
-                    {weatherTable}
+                    <div className={classes.Charts}>
+                        {temp_chart}
 
-                </div>
+                        {wind_chart}
 
-                <div className={classes.Charts}>
-                    {temp_chart}
+                        {pressure_chart}
 
-                    {wind_chart}
+                        {cloudiness_chart}
 
-                    {pressure_chart}
+                        {humidity_chart}
+                    </div>
+                </section>
 
-                    {cloudiness_chart}
+            )
 
-                    {humidity_chart}
-                </div>
-            </section>
-        )
+
     }
 
     onArrow(n, chartName) {

@@ -35,7 +35,8 @@ class Layout extends Component {
             data: null,
             appId: "4f2101004b0e81d7c5383284591e0746",
             population: null,
-            searcheError: false
+            searchError: false,
+            fetchingData: false
         };
 
         this.searchHandler = this.searchHandler.bind(this);
@@ -45,26 +46,28 @@ class Layout extends Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.state.search) {
+        if (this.state.search && !this.state.fetchingData) {
+            this.setState({
+                fetchingData: true
+            });
             axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${this.state.searchForm.city.value},${this.state.searchForm.country.value}&appid=${this.state.appId}`)
                 .then(({data}) => {
-                        console.log(data);
                         this.setState(prevState => {
                             return {
                                 data: data,
                                 population: data.city.population,
                                 search: false,
-                                searchTimes: prevState.searchTimes + 1
+                                searchTimes: prevState.searchTimes + 1,
+                                fetchingData: false
                             }
                         })
                     }
                 )
                 .catch(error => {
-                    this.setState(prevState => {
-                        return {
-                            search: false,
-                            searchError: true
-                        }
+                    this.setState({
+                        search: false,
+                        searchError: true,
+                        fetchingData: false
                     })
                 });
 
@@ -98,6 +101,7 @@ class Layout extends Component {
                 </>
             )
         }
+
         return (
             <div className={classes.Layout}>
                 {error}
@@ -110,8 +114,8 @@ class Layout extends Component {
                 />
                 <Result
                     data={this.state.data}
-                    gmtOffset={this.state.gmtOffset}
                     searchTimes={this.state.searchTimes}
+                    fetching={this.state.fetchingData}
                 />
                 <Footer/>
             </div>

@@ -8,12 +8,12 @@
 }
 
 .Open {
-    animation: openBackDrop 0.5s ease-out;
+    animation: openBackDrop 0.5s ease-out 1;
 }
 
 .Close {
     display: none;
-    animation: closeBackdrop 0.5s ease-out;
+    animation: closeBackdrop 0.5s ease-out 1;
 }
 
 @keyframes closeBackdrop {
