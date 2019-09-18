@@ -71,8 +71,6 @@ class Result extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.state.haveChartData === false) {
-            console.log("reached here");
-
             let {
                 cloud_data,
                 wind_data,
@@ -219,7 +217,7 @@ class Result extends Component {
                 />
             );
         }
-        return (
+        return !this.state.haveChartData ? null : (
             <section className={classes.Result}>
                 <div className={classes.TableAndCityContainer}>
                     <div className={classes.CityInfo}>

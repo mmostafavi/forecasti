@@ -3,4 +3,5 @@
     grid-template-rows: [row-1-start] 19rem [row-1-end row-2-start] 1fr [row-2-end row-3-start] 10rem [row-3-end];
     grid-auto-columns: auto;
     grid-template-areas: "search" "result" "footer";
+    height: 100%;
 }

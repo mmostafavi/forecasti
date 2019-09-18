@@ -7,7 +7,8 @@ import Result from "../Result/Result";
 import Footer from "../../components/Footer/Footer";
 import validator from "../../utils/validator";
 import isoCountryCodes from "../../utils/isoCountryCodes";
-
+import BackDrop from "../../components/UI/BackDrop/BackDrop";
+import Modal from "../../components/UI/Modal/Modal";
 
 class Layout extends Component {
     constructor(props) {
@@ -33,12 +34,14 @@ class Layout extends Component {
             searchTimes: 0,
             data: null,
             appId: "4f2101004b0e81d7c5383284591e0746",
-            population: null
+            population: null,
+            searcheError: false
         };
 
         this.searchHandler = this.searchHandler.bind(this);
         this.cityNameChangeHandler = this.cityNameChangeHandler.bind(this);
-        this.countryChangeHandler = this.countryChangeHandler.bind(this)
+        this.countryChangeHandler = this.countryChangeHandler.bind(this);
+        this.onModal = this.onModal.bind(this);
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -57,10 +60,10 @@ class Layout extends Component {
                     }
                 )
                 .catch(error => {
-                    console.log(error);
                     this.setState(prevState => {
                         return {
                             search: false,
+                            searchError: true
                         }
                     })
                 });
@@ -69,8 +72,35 @@ class Layout extends Component {
     }
 
     render() {
+        let error = null;
+        if (this.state.searchError) {
+            error = (
+                <>
+                    <BackDrop show={this.state.searchError} onModal={this.onModal}/>
+                    <Modal show={this.state.searchError} onModal={this.onModal}>
+                        oops! something went Wrong!
+                        check these things:
+                        <ul>
+                            <li>
+                                Country
+                            </li>
+                            <li>
+                                City name dictation (you can also type it in your language)
+                            </li>
+                            <li>
+                                Your Internet Connection
+                            </li>
+                        </ul>
+
+                        otherwise there is a problem with our service
+                        try it a few minutes later
+                    </Modal>
+                </>
+            )
+        }
         return (
             <div className={classes.Layout}>
+                {error}
                 <Search
                     onSearch={this.searchHandler}
                     onCityNameChange={this.cityNameChangeHandler}
@@ -124,6 +154,14 @@ class Layout extends Component {
                     ...this.state.searchForm.country,
                     value: value
                 }
+            }
+        })
+    }
+
+    onModal() {
+        this.setState(prevState => {
+            return {
+                searchError: !prevState.searchError
             }
         })
     }

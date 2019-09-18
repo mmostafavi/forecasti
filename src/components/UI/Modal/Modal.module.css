@@ -1,0 +1,57 @@
+.Modal {
+    width: 15rem;
+    position: fixed;
+    bottom: 20%;
+    left: calc(50% - 7.5rem);
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: #f2a358;
+    color: black;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-100%);
+}
+
+.AcceptButton {
+    border: 1px solid transparent;
+    border-radius: 15%;
+    background-color: #458027;
+    color: white;
+    text-align: center;
+    padding: 0.2rem 0.4rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.Open {
+    animation: modal-open 0.5s ease-out forwards;
+}
+
+.Close {
+    animation: modal-close 0.5s ease-out forwards;
+
+}
+
+@keyframes modal-open {
+    0% {
+        transform: translateY(-50rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes modal-close {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50rem);
+    }
+}

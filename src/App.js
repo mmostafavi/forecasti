@@ -5,6 +5,9 @@ import Contacts from "./components/StaticPages/Contacts/Contacts"
 import BehindScene from "./components/StaticPages/BehindScene/BehindScene"
 import {BrowserRouter, Switch, Route, Redirect} from "react-router-dom"
 
+//error boundary
+import errorHandler from "./hoc/errorHandler"
+
 
 class App extends Component {
     render() {
@@ -21,4 +24,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default errorHandler(App);
