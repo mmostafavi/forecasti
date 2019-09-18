@@ -1,8 +1,6 @@
 import React from "react";
 import {ResponsiveLine} from "@nivo/line";
 
-import classes from "./ChartGenerator.module.css";
-
 const chartGenerator = props => {
     return (
         <ResponsiveLine

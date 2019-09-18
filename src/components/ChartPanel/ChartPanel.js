@@ -13,7 +13,7 @@ const chartPanel = props => {
                     <h2 className={classes.ChartTitle}>{props.chartTitle}</h2>
                 </div>
                 <div className={classes.IconContainer}>
-                    <img src={props.icon} className={classes.Icon}/>
+                    <img alt={"chart icon"} src={props.icon} className={classes.Icon}/>
                 </div>
             </div>
 

@@ -10,7 +10,7 @@ const footer = () => {
             <div className={classes.MainFooter}>
                 <div className={classes.FooterLogoContainer}>
                     <Link to="/">
-                        <img src={footerLogo} className={classes.FooterLogo}/>
+                        <img alt={"logo"} src={footerLogo} className={classes.FooterLogo}/>
                     </Link>
                 </div>
                 <nav className={classes.NavLinks}>

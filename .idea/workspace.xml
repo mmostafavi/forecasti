@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92cf0276-95af-4df5-b6e5-8f75e4cf37d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/faces/mahdi-tiny.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/faces/mahdi-tiny.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChartPanel/ChartPanel.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChartPanel/ChartPanel.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SlideLabel/SlideLabel.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SlideLabel/SlideLabel.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Layout/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Layout/Layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Layout/Layout.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Layout/Layout.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Result/Result.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Result/Result.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChartGenerator/ChartGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChartGenerator/ChartGenerator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChartPanel/ChartPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChartPanel/ChartPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ForecastTable/ForecastTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ForecastTable/ForecastTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Modal/Modal.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Modal/Modal.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/dataAnalyzer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/dataAnalyzer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,12 +24,50 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/Result/Result.js">
+        <entry file="file://$PROJECT_DIR$/src/components/ForecastTable/ForecastTable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1243">
-              <caret line="219" column="49" selection-start-line="219" selection-start-column="49" selection-end-line="219" selection-end-column="49" />
+            <state relative-caret-position="374">
+              <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/UI/Modal/Modal.module.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/ChartPanel/ChartPanel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/dataAnalyzer.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/ChartGenerator/ChartGenerator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,39 +86,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hoc/errorHandler.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/UI/Modal/Modal.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/UI/Modal/Modal.module.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/UI/BackDrop/BackDrop.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -97,11 +97,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/UI/BackDrop/BackDrop.module.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
+            <state relative-caret-position="145">
               <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Footer/Footer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,30 +123,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="161">
               <caret line="78" column="24" lean-forward="true" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -168,14 +156,9 @@
         <option value="$PROJECT_DIR$/src/components/Result/Result.module.css" />
         <option value="$PROJECT_DIR$/src/components/Result/Result.js" />
         <option value="$PROJECT_DIR$/src/utils/chartGenerator.js" />
-        <option value="$PROJECT_DIR$/src/utils/dataAnalyzer.js" />
         <option value="$PROJECT_DIR$/src/components/Search/Search.js" />
         <option value="$PROJECT_DIR$/src/components/SlideLabel/SlideLabel.js" />
-        <option value="$PROJECT_DIR$/src/components/ChartGenerator/ChartGenerator.js" />
-        <option value="$PROJECT_DIR$/src/components/ChartPanel/ChartPanel.js" />
-        <option value="$PROJECT_DIR$/src/components/ForecastTable/ForecastTable.js" />
         <option value="$PROJECT_DIR$/src/logo/logo.svg" />
-        <option value="$PROJECT_DIR$/src/components/Footer/Footer.js" />
         <option value="$PROJECT_DIR$/src/components/StaticPages/BehindScene/BehindScene.js" />
         <option value="$PROJECT_DIR$/src/components/StaticPages/Contacts/Contacts.js" />
         <option value="$PROJECT_DIR$/src/components/StaticPages/Contacts/Contacts.module.css" />
@@ -195,9 +178,14 @@
         <option value="$PROJECT_DIR$/src/hoc/errorHandler.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/containers/Layout/Layout.js" />
-        <option value="$PROJECT_DIR$/src/components/UI/Modal/Modal.module.css" />
         <option value="$PROJECT_DIR$/src/components/UI/Modal/Modal.js" />
         <option value="$PROJECT_DIR$/src/components/UI/BackDrop/BackDrop.module.css" />
+        <option value="$PROJECT_DIR$/src/components/Footer/Footer.js" />
+        <option value="$PROJECT_DIR$/src/components/ChartPanel/ChartPanel.js" />
+        <option value="$PROJECT_DIR$/src/utils/dataAnalyzer.js" />
+        <option value="$PROJECT_DIR$/src/components/ChartGenerator/ChartGenerator.js" />
+        <option value="$PROJECT_DIR$/src/components/ForecastTable/ForecastTable.js" />
+        <option value="$PROJECT_DIR$/src/components/UI/Modal/Modal.module.css" />
       </list>
     </option>
   </component>
@@ -471,12 +459,12 @@
       <workItem from="1568590778856" duration="612000" />
       <workItem from="1568624805337" duration="3985000" />
       <workItem from="1568667700734" duration="3696000" />
-      <workItem from="1568704404537" duration="38069000" />
+      <workItem from="1568704404537" duration="38496000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151540000" />
+    <option name="totallyTimeSpent" value="151967000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -617,26 +605,6 @@
     <entry file="file://$PROJECT_DIR$/src/assets/icon/weather/svg/021-sunset.svg" />
     <entry file="file://$PROJECT_DIR$/src/assets/icon/weather/svg/021-snowing-1.svg" />
     <entry file="file://$PROJECT_DIR$/src/assets/icon/weather/svg/021-snowing.svg" />
-    <entry file="file://$PROJECT_DIR$/src/utils/dataAnalyzer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2006">
-          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ChartGenerator/ChartGenerator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -661,16 +629,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nivo charts.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Footer/Footer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/StaticPages/BehindScene/BehindScene.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -699,16 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ForecastTable/ForecastTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1233">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -778,16 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ChartPanel/ChartPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ChartPanel/ChartPanel.module.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
@@ -829,13 +767,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UI/Modal/Modal.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -891,8 +822,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UI/BackDrop/BackDrop.module.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
+        <state relative-caret-position="145">
           <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Footer/Footer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ChartPanel/ChartPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/dataAnalyzer.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ChartGenerator/ChartGenerator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ForecastTable/ForecastTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UI/Modal/Modal.module.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
         </state>
       </provider>
     </entry>

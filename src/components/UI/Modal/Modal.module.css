@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    transform: translateY(-100%);
+    transform: translateY(-50rem);
 }
 
 .AcceptButton {

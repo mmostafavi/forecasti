@@ -1,6 +1,3 @@
-import React from "react";
-import {ResponsiveLine} from "@nivo/line";
-
 const dataAnalyzer = (data, gmtOffset) => {
     const tempData = [], humidityData = [], pressureData = [], windSpeedData = [], cloudData = [], weatherData = [];
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];

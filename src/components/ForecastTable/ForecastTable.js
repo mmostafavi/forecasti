@@ -56,7 +56,7 @@ const forecastTable = props => {
                 <tr className={classes.Row} key={temp.x}>
                     <td className={classes.Cell}>{temp.x}</td>
                     <td className={classes.Weather}>
-                        <img src={weatherIcons[index]} className={classes.Icon}/>
+                        <img alt={"weather icon"} src={weatherIcons[index]} className={classes.Icon}/>
                     </td>
                     <td className={classes.Cell}>{temp.y}</td>
                     <td className={classes.Cell}>{props.wind[index].y}</td>
