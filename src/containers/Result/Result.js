@@ -226,9 +226,9 @@ class Result extends Component {
                         {cityInfo}
                     </div>
                     <hr/>
-                    <div className={classes.Table}>
-                        {weatherTable}
-                    </div>
+
+                    {weatherTable}
+
                 </div>
 
                 <div className={classes.Charts}>
