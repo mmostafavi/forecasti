@@ -18,7 +18,10 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #e3e3e3;
+    background-image: url("./assets/background/cloudy_background.jpg");
+    background-size: cover;
+    background-position: center;
+    /*background-repeat:repeat;*/
 }
 
 code {
