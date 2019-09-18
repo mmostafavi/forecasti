@@ -14,9 +14,11 @@
 
 .Chart {
     width: 95%;
+    margin: 0 auto 3rem;
+    padding: 0 0 1rem;
     border-radius: 30px;
     background-color: white;
-    margin: 0 auto 3rem;
+
 }
 
 .Title {
