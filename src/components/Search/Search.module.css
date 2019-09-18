@@ -1,7 +1,7 @@
 .Search {
     display: block;
+    grid-area: search;
     width: 100%;
-    height: 12rem;
     padding: 5rem 0 0;
     border: 1px solid transparent;
     border-radius: 0 0 30% 30%;
@@ -27,7 +27,7 @@
 .SearchButton {
     width: 5rem;
     padding: 0.5rem;
-    margin: 0 0.5rem;
+    margin: 0 0.5rem 0 2rem;
     text-align: center;
     font-weight: bold;
     border: 1px solid black;
@@ -35,6 +35,7 @@
     background-color: #ffd652;
     color: #0072ff;
     outline: none;
+    cursor: pointer;
 }
 
 .SearchButton:hover {

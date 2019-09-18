@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import axios from "axios";
 
+import classes from "./Layout.module.css"
 import Search from "../../components/Search/Search";
 import Result from "../Result/Result";
+import Footer from "../../components/Footer/Footer";
 import validator from "../../utils/validator";
 import isoCountryCodes from "../../utils/isoCountryCodes";
 
@@ -68,7 +70,7 @@ class Layout extends Component {
 
     render() {
         return (
-            <>
+            <div className={classes.Layout}>
                 <Search
                     onSearch={this.searchHandler}
                     onCityNameChange={this.cityNameChangeHandler}
@@ -76,8 +78,13 @@ class Layout extends Component {
                     searchForm={this.state.searchForm}
                     options={isoCountryCodes}
                 />
-                <Result data={this.state.data} gmtOffset={this.state.gmtOffset} searchTimes={this.state.searchTimes}/>
-            </>
+                <Result
+                    data={this.state.data}
+                    gmtOffset={this.state.gmtOffset}
+                    searchTimes={this.state.searchTimes}
+                />
+                <Footer/>
+            </div>
         );
     }
 

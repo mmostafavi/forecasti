@@ -16,9 +16,33 @@
     width: 95%;
     border-radius: 30px;
     background-color: white;
-    margin: 3rem auto;
+    margin: 0 auto 3rem;
+}
+
+.Title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ChartTitleContainer {
+    margin: 0 1rem;
 }
 
 .ChartTitle {
+    display: block;
     text-align: center;
+    padding: 0.5rem;
+}
+
+.IconContainer {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 1rem;
+}
+
+.Icon {
+    display: block;
+    width: 100%;
+    height: 100%;
 }

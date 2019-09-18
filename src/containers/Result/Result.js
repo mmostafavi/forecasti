@@ -5,6 +5,14 @@ import dataAnalyzer from "../../utils/dataAnalyzer";
 import ChartPanel from "../../components/ChartPanel/ChartPanel"
 import ForecastTable from "../../components/ForecastTable/ForecastTable"
 
+// chart title Icons
+import tempIcon from "../../assets/icon/chartTitle/temperature.svg";
+import windIcon from "../../assets/icon/chartTitle/wind.svg";
+import cloudIcon from "../../assets/icon/chartTitle/clouds.svg";
+import humidityIcon from "../../assets/icon/chartTitle/humidity.svg";
+import pressureIcon from "../../assets/icon/chartTitle/air-pressure.svg";
+
+
 class Result extends Component {
 
 
@@ -157,6 +165,7 @@ class Result extends Component {
                     chartTitle={"Cloudiness"}
                     chartSlideName={"cloud_data_slide"}
                     onArrow={this.onArrow}
+                    icon={cloudIcon}
                     label={this.state.chartData.labelDates[this.state.slides.cloud_data_slide]}
                 />
             )
@@ -169,6 +178,7 @@ class Result extends Component {
                     chartTitle={"Temperature"}
                     chartSlideName={"temp_data_slide"}
                     onArrow={this.onArrow}
+                    icon={tempIcon}
                     label={this.state.chartData.labelDates[this.state.slides.temp_data_slide]}
                 />
             );
@@ -180,6 +190,7 @@ class Result extends Component {
                     chartTitle={"Pressure"}
                     chartSlideName={"pressure_data_slide"}
                     onArrow={this.onArrow}
+                    icon={pressureIcon}
                     label={this.state.chartData.labelDates[this.state.slides.pressure_data_slide]}
                 />
             );
@@ -191,6 +202,7 @@ class Result extends Component {
                     chartTitle={"Wind"}
                     chartSlideName={"wind_data_slide"}
                     onArrow={this.onArrow}
+                    icon={windIcon}
                     label={this.state.chartData.labelDates[this.state.slides.wind_data_slide]}
                 />
             );
@@ -202,6 +214,7 @@ class Result extends Component {
                     chartTitle={"Humidity"}
                     chartSlideName={"humidity_data_slide"}
                     onArrow={this.onArrow}
+                    icon={humidityIcon}
                     label={this.state.chartData.labelDates[this.state.slides.humidity_data_slide]}
                 />
             );

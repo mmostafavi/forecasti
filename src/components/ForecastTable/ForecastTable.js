@@ -70,7 +70,7 @@ const forecastTable = props => {
             <table className={classes.Table}>
                 <thead>
                 <tr className={classes.FirstRow}>
-                    <th className={classes.Header}>Hour</th>
+                    <th className={classes.Header}>Time</th>
                     <th className={classes.Header}>Weather</th>
                     <th className={classes.Header}>Temperature(C)</th>
                     <th className={classes.Header}>Wind(m/s)</th>
@@ -82,7 +82,7 @@ const forecastTable = props => {
                 </tbody>
 
             </table>
-
+            <hr/>
             <SlideLabel
                 onArrow={props.onArrow}
                 name={props.tableName}
