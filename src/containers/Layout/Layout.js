@@ -50,7 +50,7 @@ class Layout extends Component {
             this.setState({
                 fetchingData: true
             });
-            axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${this.state.searchForm.city.value},${this.state.searchForm.country.value}&appid=${this.state.appId}`)
+            axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${this.state.searchForm.city.value},${this.state.searchForm.country.value}&appid=${this.state.appId}`)
                 .then(({data}) => {
                         this.setState(prevState => {
                             return {
