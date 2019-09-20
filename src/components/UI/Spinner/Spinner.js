@@ -9,8 +9,8 @@ const spinner = () => {
             <Loader
                 type="Plane"
                 color="#ffce12"
-                height={100}
-                width={100}
+                height={30}
+                width={30}
                 timeout={0}
                 visible={true}
             />

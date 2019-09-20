@@ -1,4 +1,8 @@
 .SpinnerContainer {
-    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 12rem;
     margin: 0 auto;
+    overflow: hidden;
 }

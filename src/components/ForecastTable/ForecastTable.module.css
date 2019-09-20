@@ -28,10 +28,13 @@
     border-radius: 0 0 10px 10px;
 }
 
+.Header {
+    font-size: 0.8rem;
+}
+
 .Table th {
     /*border-right: 1px solid black;*/
     /*border-left: 1px solid black;*/
-    font-size: 1rem;
     font-weight: bold;
     padding: 1rem 0;
     background-color: #458027;

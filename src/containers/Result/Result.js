@@ -218,37 +218,46 @@ class Result extends Component {
                 />
             );
         }
+        {/*<section className={classes.Result}>*/
+        }
+        {/*    <Spinner/>*/
+        }
+        {/*</section>*/
+        }
         return this.props.fetching ? (
-                <Spinner/>
-            ) :
-            !this.state.haveChartData ? null : (
                 <section className={classes.Result}>
-                    <div className={classes.TableAndCityContainer}>
-                        <div className={classes.CityInfo}>
-                            {cityInfo}
-                        </div>
-                        <hr/>
-
-                        {weatherTable}
-
-                    </div>
-
-                    <div className={classes.Charts}>
-                        {temp_chart}
-
-                        {wind_chart}
-
-                        {pressure_chart}
-
-                        {cloudiness_chart}
-
-                        {humidity_chart}
-                    </div>
+                    <Spinner/>
                 </section>
+            ) :
+            this.state.haveChartData ?
+                (
+                    <section className={classes.Result}>
+                        <div className={classes.TableAndCityContainer}>
+                            <div className={classes.CityInfo}>
+                                {cityInfo}
+                            </div>
+                            <hr/>
 
-            )
+                            {weatherTable}
 
+                        </div>
 
+                        <div className={classes.Charts}>
+                            {temp_chart}
+
+                            {wind_chart}
+
+                            {pressure_chart}
+
+                            {cloudiness_chart}
+
+                            {humidity_chart}
+                        </div>
+                    </section>
+
+                )
+                :
+                <section className={classes.Result}/>
     }
 
     onArrow(n, chartName) {
