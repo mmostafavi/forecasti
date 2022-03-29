@@ -1,4 +1,4 @@
-final result is available at https://forecasti.herokuapp.com
+final result is available at https://forecasti.web.app
 
 ## explanation
 
