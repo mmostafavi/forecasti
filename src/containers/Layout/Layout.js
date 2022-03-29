@@ -16,7 +16,7 @@ class Layout extends Component {
         this.state = {
             searchForm: {
                 country: {
-                    value: 'IR'
+                    value: 'AZ'
                 },
                 city: {
                     value: '',
